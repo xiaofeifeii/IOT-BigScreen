@@ -1,8 +1,8 @@
 <!--
- * @Author: daidai
- * @Date: 2022-02-28 16:16:42
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-07-20 17:57:11
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\view\indexs\left-center.vue
 -->
 <template>

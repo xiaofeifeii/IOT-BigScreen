@@ -1,8 +1,8 @@
 <!--
- * @Author: daidai
- * @Date: 2022-03-01 09:16:22
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-09-29 15:12:34
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\components\item-wrap\item-wrap.vue
 -->
 <template>

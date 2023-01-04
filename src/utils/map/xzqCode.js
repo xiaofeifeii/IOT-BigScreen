@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
- * @Date: 2022-03-02 09:51:44
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-02 09:51:45
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
+ * @LastEditors: yyf
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\utils\map\xzqCode.js
  */
    //获取中国行政区 code

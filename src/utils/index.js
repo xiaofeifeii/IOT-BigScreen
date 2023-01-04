@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
- * @Date: 2022-02-23 08:59:26
- * @LastEditors: daidai
- * @LastEditTime: 2022-02-24 17:11:58
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
+ * @LastEditors: yyf
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \big-screen-vue-datav\src\utils\index.js
  */
 

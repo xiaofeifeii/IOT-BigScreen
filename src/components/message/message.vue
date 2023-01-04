@@ -1,8 +1,8 @@
 <!--
- * @Author: daidai
- * @Date: 2022-03-02 17:07:40
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-26 11:41:27
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\components\message\message.vue
 -->
 <template>

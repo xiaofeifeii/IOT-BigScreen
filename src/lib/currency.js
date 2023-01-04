@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
+ * @Author: yyf
  * @Date: 2021-12-06 15:53:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-22 09:31:24
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\lib\currency.js
  */
 import router from '@/router'

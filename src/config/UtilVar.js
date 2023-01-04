@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
+ * @Author: yyf
  * @Date: 2021-12-06 10:58:24
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-27 16:54:32
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\config\UtilVar.js
  */
 var UtilVar = {

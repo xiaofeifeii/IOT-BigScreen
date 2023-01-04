@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
- * @Date: 2022-01-12 14:22:29
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-28 14:53:02
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\router\index.js
  */
 import Vue from "vue";

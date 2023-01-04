@@ -1,7 +1,7 @@
 <!--
  * @Author: wei
  * @description: 大屏自适应容器组件
- * @LastEditTime: 2022-09-09 16:42:40
+ * @LastEditTime: 2023-01-04 17:34:58
 -->
 <template>
   <!-- <section class="screen-box" :style="boxStyle"> -->

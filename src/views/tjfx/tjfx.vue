@@ -1,8 +1,8 @@
 <!--
- * @Author: daidai
- * @Date: 2022-03-04 09:52:25
- * @LastEditors: daidai
- * @LastEditTime: 2022-03-04 11:03:40
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
+ * @LastEditors: yyf
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \web-pc\src\pages\big-screen\view\tjfx\tjfx.vue
 -->
 <template>

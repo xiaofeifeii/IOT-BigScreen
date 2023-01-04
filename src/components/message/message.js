@@ -1,8 +1,8 @@
 /*
- * @Author: daidai
- * @Date: 2022-02-16 17:08:26
+ * @Author: yyf
+ * @Date: 2023-01-04 17:34:58
  * @LastEditors: Please set LastEditors
- * @LastEditTime: 2022-04-25 10:12:36
+ * @LastEditTime: 2023-01-04 17:34:58
  * @FilePath: \yhht-ui\yhht-ui\packagesEle\getXY\src\main.js
  */
 import Vue from 'vue';
