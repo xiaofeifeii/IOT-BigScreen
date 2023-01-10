@@ -55,6 +55,8 @@ let isEncryptionParam = (params) => {
     return params
 
 }
+
+
 export const GET = async (url, params) => {
     try {
         params = isEncryptionParam(params)

@@ -13,73 +13,39 @@
           <span class="orderNum">{{ i + 1 }}</span>
           <div class="inner_right">
             <div class="dibu"></div>
-            
-            <!-- <div class="flex">
-              <div class="info">
-                <span class="labels ">设备ID：</span>
-                <span class="contents zhuyao"> {{ item.gatewayno }}</span>
-              </div>
-            
-              <div class="info">
-                <span class="labels">型号：</span>
-                <span class="contents "> {{ item.terminalno }}</span>
-              </div>
-              <div class="info">
-                <span class="labels">告警值：</span>
-                <span class="contents warning"> {{ item.alertvalue | montionFilter }}</span>
-              </div>
-            </div> -->
-
             <div class="flex">
               <div class="info">
                 <span class="labels ">设备ID：</span>
                 <span class="contents zhuyao"> {{ item.DeviceId }}</span>
-                <span></span>
+                
+                
               </div>
               <div class="info">
-                <span class="labels"> 地址：</span>
-                <span class="contents ciyao" style="font-size:14px"> {{ item.provinceName }}/{{ item.cityName }}/{{ item.countyName }}</span>
-              </div>
-              <div class="info time">
-                <span class="labels">时间：</span>
-                <span class="contents" style="font-size:14px"> {{ item.createtime }}</span>
-              </div>
-            </div>
-
-            
-            <div v-if="item.VDflag" class="flex">
-              
-              <div class="info">
-                <span class="labels">能见度</span>
-                <!-- <span class="contents "> {{ item.terminalno }}</span> -->
-              </div>
-              <div class="info">
-                <span class="labels">告警值：</span>
-                <span class="contents alarm"> {{ item.alertVD | montionFilter }}</span>
-              </div>
-            </div>
-
-            
-            <div v-if="item.Voltageflag" class="flex">
-              
-              <div class="info">
-                <span class="labels">电压</span>
-                <!-- <span class="contents "> {{ item.terminalno }}</span> -->
-              </div>
-              <div class="info">
-                <span class="labels">告警值：</span>
-                <span class="contents alarm"> {{ item.alertVoltage | montionFilter }}</span>
+                <span class="labels ">屏幕类型：</span>
+                <span class="contents zhuyao"> {{ item.screen_type }}</span>
               </div>
             </div>
 
             <div class="flex">
               <div class="info">
-                <span class="labels">报警内容：</span>
-                <span class="contents ciyao" :class="{ warning: item.alertdetail }"> {{ item.alertdetail || '无'
+                <span class="labels"> 地址：</span>
+                <span class="contents ciyao" style="font-size:12px"> {{ item.provinceName }}/{{ item.cityName }}/{{ item.countyName }}</span>
+              </div>
+              <div class="info time">
+                <span class="labels">时间：</span>
+                <span class="contents" style="font-size:12px"> {{ item.createtime }}</span>
+              </div>
+
+            </div>
+              
+            <div class="flex">
+              <div class="info">
+                <span class="labels">当前屏幕显示内容：</span>
+                <span class="contents ciyao" :class="{ warning: item.context }"> {{ item.context || '无'
                 }}</span>
               </div>
             </div>
-
+          
           </div>
         </li>
       </ul>
@@ -100,8 +66,6 @@ export default {
     return {
       list: [],
       pageflag: true,
-      VDflag:true,
-      Voltageflag:true,
       defaultOption: {
         ...this.$store.state.setting.defaultOption,
         limitMoveNum: 3, 
@@ -128,30 +92,13 @@ export default {
 
   mounted() { },
   methods: {
-    verify_alarm_list(){
-      var l1 = this.list
-      for (let i = 0; i < l1.length; i++) {
-        if("alertVD" in l1[i]){
-          l1[i]["VDflag"] = true
-        }else{
-          l1[i]["VDflag"] = false
-        }
-
-        if("alertVoltage" in l1[i]){
-          l1[i]["Voltageflag"] = true
-        }else{
-          l1[i]["Voltageflag"] = false
-        }
-      }
-    },
     getData() {
       this.pageflag = true
       // this.pageflag =false
-      currentGET('big5', { limitNum: 50 }).then(res => {
-        console.log('设备报警', res);
+      currentGET('big6', { limitNum: 50 }).then(res => {
+        console.log('当前屏幕显示内容', res);
         if (res.success) {
           this.list = res.data.list
-          this.verify_alarm_list()
           let timer = setTimeout(() => {
               clearTimeout(timer)
               this.defaultOption.step=this.$store.state.setting.defaultOption.step
@@ -188,7 +135,7 @@ export default {
     .inner_right {
       position: relative;
       height: 100%;
-      width: 600px;
+      width: 400px;
       flex-shrink: 0;
       line-height: 1.5;
 
@@ -204,7 +151,7 @@ export default {
     }
 
     .info {
-      margin-right: 10px;
+      margin-right: 20px;
       display: flex;
       align-items: center;
 
@@ -224,12 +171,8 @@ export default {
       }
 
       .warning {
-        color: #E6A23C;
-        font-size: 15px;
-      }
-      .alarm{
-        color: #ff0000;
-        font-size: 15px;
+        color: #60b1a1;
+        font-size: 18px;
       }
     }
 

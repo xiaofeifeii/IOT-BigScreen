@@ -19,6 +19,7 @@ import Messages from './components/message/message'
 import "vue-easytable/libs/theme-default/index.css";
 import  '@/assets/css/public.scss'
 import "@/assets/css/index.scss"
+import BaiduMap from 'vue-baidu-map'
 
 
 import * as filters from '@/directives/filters'
@@ -44,6 +45,11 @@ Vue.use(digitalFlop)
 Vue.use(capsuleChart)
 // 全局数据过滤器
 Object.keys(filters).forEach(k => Vue.filter(k, filters[k]));
+
+// 百度地图组件
+Vue.use(BaiduMap,{ak:'qh6GL9uEK1241WjDbO67deMsRlzCGHCh'})
+
+
 new Vue({
   router,
   store,

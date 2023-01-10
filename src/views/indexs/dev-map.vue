@@ -48,7 +48,7 @@ export default {
   methods: {
     getData(code) {
       currentGET("big8", { regionCode: code }).then((res) => {
-        console.log("设备分布图", res);
+        console.log("设备分布", res);
         if (res.success) {
           this.getGeojson(res.data.regionCode, res.data.dataList);
           this.mapclick();

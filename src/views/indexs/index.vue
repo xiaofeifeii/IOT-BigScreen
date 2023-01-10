@@ -15,8 +15,8 @@
       <!-- 左上 -->
       <ItemWrap class="contetn_left-top contetn_lr-item" title="设备总览">
         <LeftTop />
-
       </ItemWrap>
+      
       <!-- <ItemWrap class="contetn_left-center contetn_lr-item" title="用户总览">
         <LeftCenter />
       </ItemWrap>
@@ -24,16 +24,20 @@
 
       <!--左下  -->
       <ItemWrap class="contetn_left-bottom contetn_lL-item" title="网关状态信息" style="padding: 0 10px 16px 10px">
-        <LeftBottom />
-      </ItemWrap>
+        <dev_info />
+      </ItemWrap> 
     </div>
 
+
+    <!-- 中间 -->
     <div class="contetn_center">
-      <!-- 中下 -->
-      <CenterMap class="contetn_center_top" />
+      <!-- 中上 -->
+      <!-- <CenterMap class="contetn_center_top" /> -->
+        <baidu_map class="contetn_center_top"/>
+
       <ItemWrap class="contetn_center-bottom" title="设备报警">
         <!-- <CenterBottom /> -->
-        <!-- <RightBottom /> -->
+      <!-- 中下 -->
         <DevAlarmMsgVue/>
       </ItemWrap>
     </div>
@@ -42,16 +46,17 @@
       <!-- 右上 -->
       <ItemWrap class="contetn_left-bottom contetn_lr-item" title="显示屏当前内容">
         <!-- <RightTop /> -->
-        <RightBottom />
+        <screen_display />
       </ItemWrap>
       <!-- 右中 -->
       <ItemWrap class="contetn_left-bottom contetn_lr-item" title="当前能见度数据" style="padding: 0 10px 16px 10px">
-        <RightCenter />
+        <!-- <RightCenter /> -->
+        <VD_current/>
       </ItemWrap>
       <!-- 右下 -->
       <ItemWrap class="contetn_left-bottom contetn_lr-item" title="历史能见度数据 ">
         <!-- <RightBottom /> -->
-        <RightTop />
+        <VD_history />
       </ItemWrap>
     </div>
   </div>
@@ -67,6 +72,12 @@ import RightTop from "./right-top.vue";
 import RightCenter from "./right-center.vue";
 import RightBottom from "./right-bottom.vue";
 import DevAlarmMsgVue from './dev-alarm-msg.vue';
+import baidu_map from './baidu_map.vue';
+import dev_info from './dev_info.vue';
+import screen_display from './screen_display.vue';
+import VD_history from './VD_history.vue';
+import VD_current from './VD_current.vue';
+
 export default {
   components: {
     LeftTop,
@@ -78,6 +89,11 @@ export default {
     RightBottom,
     CenterBottom,
     DevAlarmMsgVue,
+    baidu_map,
+    dev_info,
+    screen_display,
+    VD_history,
+    VD_current,
   },
   data() {
     return {

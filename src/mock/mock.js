@@ -18,12 +18,11 @@ function countUserNum() {
     a.data.onlineNum=a.data.totalNum-a.data.offlineNum-a.data.lockNum
     return a
 }
-
 // 接口，第一个参数url，第二个参数请求类型，第三个参数响应回调
 Mock.mock(new RegExp('countUserNum'), 'get', countUserNum)
 
-// /设备总览 
 
+// /设备总览 
 function countDeviceNum() {
     const a = Mock.mock({
         success: true,
@@ -34,15 +33,12 @@ function countDeviceNum() {
         }
     })
     a.data.onlineNum=a.data.totalNum-a.data.offlineNum
-
-
     return a
 }
+// Mock.mock(new RegExp('countDeviceNum'), 'get', countDeviceNum)
 
-Mock.mock(new RegExp('countDeviceNum'), 'get', countDeviceNum)
 
 // /设备总览 
-
 function sbtx() {
     const a = Mock.mock({
         success: true,
@@ -63,13 +59,11 @@ function sbtx() {
     })
     return a
 }
-
 Mock.mock(new RegExp('sbtx'), 'get', sbtx)
 
 
 
 //中间地图
-
 function centermap(options) {
     let params = parameteUrl(options.url)
     if (params.regionCode && params.regionCode != 'china') {
@@ -125,8 +119,7 @@ function alarmNum() {
 }
 Mock.mock(new RegExp('alarmNum'), 'get', alarmNum)
 
-// 实时预警
-
+// 实时预警   (设备报警)
 function ssyj() {
     const a = Mock.mock({
         success: true,
@@ -150,7 +143,10 @@ function ssyj() {
     })
     return a
 }
-Mock.mock(new RegExp('ssyj'), 'get', ssyj)
+// Mock.mock(new RegExp('ssyj'), 'get', ssyj)
+
+
+
 //安装计划 
 function installationPlan() {
     let num=  RandomNumBoth(26,32);
@@ -199,6 +195,9 @@ function ranking() {
   return a
 }
 Mock.mock(new RegExp('ranking'), 'get', ranking)
+
+
+
 /**
  * @description: min ≤ r ≤ max  随机数
  * @param {*} Min
